@@ -13,7 +13,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cors());
 app.options(cors());
 
-const port = 5000;
+const port = preoces.env.PORT || 5000;
 
 const __filename = fileURLToPath(import.meta.url);
 
@@ -26,6 +26,7 @@ app.use(express.static(path.join(__dirname, "public")));
 
 // var listId = "fdffc3a4-4193-11ed-9a32-0241b9615763";
 
+// var url = `https://emailoctopus.com/api/1.5/lists/${listId}/contacts`;
 // var url = `https://emailoctopus.com/api/1.5/lists/${listId}/contacts`;
 
 app.post("/contact", (req, res) => {
