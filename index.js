@@ -13,7 +13,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cors());
 app.options(cors());
 
-const port = preoces.env.PORT || 5000;
+const port = process.env.PORT || 5000;
 
 const __filename = fileURLToPath(import.meta.url);
 
